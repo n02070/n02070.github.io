@@ -24,28 +24,27 @@
     }
 
     .g-nav li{
-        margin: 0 10px;
+        margin: 0 20px;
     }
 
     .g-nav a{
         display: block;
         color: #FFF;
         text-align: center;
-        overflow: hidden;
+        
     }
 
+    .g-nav a:hover{
+        text-decoration: underline;
+    }
     
     .g-nav a>span{
         display: block;
-        font-size: 13px;
-        transform: translate(0,-20px);
+        font-size: 12px;
+
     }
 
-
-
-    
-
-    .g-nav a>span::before{
+    /* .g-nav a>span::before{
         display: block;
         content: "●";
         color: aquamarine;
@@ -55,7 +54,7 @@
 
     .g-nav a:hover>span{
         transform: translate(0,10px);
-    }
+    } */
 
 
     #check,label{
@@ -69,3 +68,112 @@
 
 
 /* SP用ナビゲーション */
+
+
+@media (max-width:767px){
+    label{
+        display: block;
+        
+    }
+
+    header{
+        height: 60px;
+        padding: 0 10px;
+    }
+
+    /* .btn{
+     width: 50px;
+     height: 50px;
+    } */
+
+    .btn>span{
+        width: 30px;
+        height: 3px;
+        background-color: #FFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .btn>span::before{
+        width: 30px;
+        height: 3px;
+        background-color: #FFF;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .btn>span::after{
+        width: 30px;
+        height: 3px;
+        background-color: #FFF;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -40px;
+        margin: auto;
+    }
+
+    #check:checked+label span{
+        background-color: transparent;
+    }
+
+    #check:checked+label span::before{
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    #check:checked+label span::after{
+        bottom: 20px;
+        transform: rotate(-45deg);
+    }
+
+
+
+
+
+    .g-nav{
+        width: 100%;
+        height: 60vh;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: aquamarine;
+        transform: translate(100%,0);
+        transition: 0.2s;
+    }
+
+    #check:checked ~ .g-nav{
+        transform: translate(0,0);
+    }
+
+    .g-nav ul{
+        display: block;
+    }
+
+    .g-nav li{
+        border-bottom: 1px solid #444;
+    }
+    .g-nav a{
+        color: #444;
+        text-align: left;
+    }
+
+    .g-nav a>span{
+        display: inline-block;
+        margin-left: 20px;
+
+    }
+
+
+
+
+}

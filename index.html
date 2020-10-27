@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GithubPagesのトップページ</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        
-
-        .box0{
+        .box0 {
             width: 300px;
             height: 300px;
             background-color: cadetblue;
         }
 
-  
-        #check0:checked ~ .box0{
+
+        #check0:checked~.box0 {
             background-color: coral;
             animation: move 5s;
         }
+
         /* :checkedは擬似クラス
          ::は擬似要素 */
 
-         /* ＋は弟（inputから見て1個下の兄弟。今回はlabel ）
+        /* ＋は弟（inputから見て1個下の兄弟。今回はlabel ）
          ~は（下の兄弟要素） */
 
         @keyframes move {
-            0%{transform: translate(0,0);}
-            25%{transform: translate(500px,0);}
-            50%{transform: translate(500px,400px);}
-            75%{transform: translate(0,400px) rotate(0);}
-            100%{transform:translate(0,0) rotate(360deg);}
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(500px, 0);
+            }
+
+            50% {
+                transform: translate(500px, 400px);
+            }
+
+            75% {
+                transform: translate(0, 400px) rotate(0);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
         }
 
 
 
-/* ーーーーーーーーーーーーーーー以下ハンバーガーメニューーーーーーーーーーーーーーーーー */
-
-
-
-
-        
-
-
-
+        /* ーーーーーーーーーーーーーーー以下ハンバーガーメニューーーーーーーーーーーーーーーーー */
     </style>
 
 
 
 </head>
+
 <body>
 
     <!-- 本日やる事
@@ -60,43 +67,48 @@
     <header>
         <h1>10月27日</h1>
 
-        
+
 
 
         <!-- /* ーーーーーーーーーーーーーーー以下ハンバーガーメニューーーーーーーーーーーーーーーーー */ -->
 
-    
+
 
 
 
         <input type="checkbox" id="check">
-        <label for="check"><p>ボタン</p></label>
+        <label for="check">
+            <p class="btn"><span></span></p>
+        </label>
 
-    
 
-    
+
+
         <nav class="g-nav">
 
-         <ul>
-             <li><a href="#">BLOG<span>ブログ</span></a></li>
-             <li><a href="#">SERVICE<span>事業一覧</span></a></li>
-             <li><a href="#">RECRUIT<span>採用情報</span></a></li>
-             <li><a href="#">COMPANY<span>会社案内</span></a></li>
-         </ul>
+            <ul>
+                <li><a href="#">BLOG<span>ブログ</span></a></li>
+                <li><a href="#">SERVICE<span>事業一覧</span></a></li>
+                <li><a href="#">RECRUIT<span>採用情報</span></a></li>
+                <li><a href="#">COMPANY<span>会社案内</span></a></li>
+            </ul>
         </nav>
 
     </header>
 
-           <!-- /* ーーーーーーーーーーーーーーーここまでハンバーガーメニューーーーーーーーーーーーーーーーー */ -->
+    <!-- /* ーーーーーーーーーーーーーーーここまでハンバーガーメニューーーーーーーーーーーーーーーーー */ -->
 
 
 
-        
 
-        <input type="checkbox" id="check0">
-        <label for="check0"><p>ボタン</p></label>
-    
-        <div class="box0"></div>
+
+    <input type="checkbox" id="check0">
+    <label for="check0">
+        <p>ボタン</p>
+    </label>
+
+    <div class="box0"></div>
 
 </body>
+
 </html>
