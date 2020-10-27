@@ -20,6 +20,7 @@
 
     .g-nav>ul{
         display: flex;
+        padding-top: 20px;
     }
 
     .g-nav li{
@@ -29,14 +30,32 @@
     .g-nav a{
         display: block;
         color: #FFF;
+        text-align: center;
+        overflow: hidden;
     }
 
     
     .g-nav a>span{
         display: block;
         font-size: 13px;
+        transform: translate(0,-20px);
     }
 
+
+
+    
+
+    .g-nav a>span::before{
+        display: block;
+        content: "●";
+        color: aquamarine;
+
+    }
+
+
+    .g-nav a:hover>span{
+        transform: translate(0,10px);
+    }
 
 
     #check,label{
